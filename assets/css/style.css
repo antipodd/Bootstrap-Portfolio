@@ -35,6 +35,22 @@ a:hover {
     font-size: 30px;
     font-weight: bold;
 }
+/* remove default hover attributes and start color change animation on hover */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { 
+	color: #ffffff;
+    background-color: #4aaaa5;
+    animation-name: new-bkg;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;	
+}
+
+@keyframes new-bkg {
+	0% {background-color: #4aaaa5;}
+	25% {background-color: red;}
+	50% {background-color: blue;}
+	75% {background-color: purple;}
+	100% {background-color: #4aaaa5;}
+}
 
 .col-xs-12 {
 	margin-top: 10px;
@@ -62,6 +78,25 @@ a:hover {
 	border-radius: 10px;
 	width: 35%;
 	margin: 10px 30px 5px 30px;
+}
+
+.profile_image-xs-md {
+	border-radius: 10px;
+	width: 100%;
+	margin: 10px 30px 5px 30px;
+}
+
+.main_section .visible-md img {
+	width: 90%;
+}
+
+.main_section .visible-xs img {
+	width: 90%;
+}
+
+.main_section .visible-md p {
+	margin-left: 45px;
+	margin-right: 45px;
 }
 
 .main_section p {
@@ -101,6 +136,10 @@ a:hover {
 }
 
 .sidebar .col-sm-4 {
+	padding: 2.5px;
+}
+
+.sidebar .col-md-4 {
 	padding: 2.5px;
 }
 
@@ -209,7 +248,7 @@ input[type=submit]:hover {
 }
 
 .portfolio-text-2 {
-	margin-top: -80px; /*text spills over to another line, unfortunately this means that at large screen sizes the text in these images is higher up than in the others*/
+	margin-top: -65px; /*text spills over to another line, unfortunately this means that at large screen sizes the text in these images is higher up than in the others*/
 	color: #ffffff;
 	position: relative;
 	background-color: #4aaaa5;
